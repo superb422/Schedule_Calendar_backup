@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.marcohc.robotocalendar.sample.RobotoCalendarView
+        android:id="@+id/robotoCalendarPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+    </com.marcohc.robotocalendar.sample.RobotoCalendarView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/recyclerFragment"
+            android:name="com.marcohc.robotocalendar.sample.RecyclerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="100dp"
+                android:text="일정을 추가해주세요."
+                android:textColor="#051df2"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/empty"
+                android:layout_marginStart="60dp"
+                app:srcCompat="@drawable/ic_add" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
